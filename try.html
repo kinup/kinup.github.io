@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+
+<body>
+
+    <form id="dynamicForm">
+        <select id="A">
+            <option value="A1">PG Degree</option>
+            <option value="A2">UG Degree</option>
+            <option value="A3">1-Year Diplomas</option>
+            <option value="A4">6-month Certificates</option>
+        </select>
+        <select id="B">
+        </select>
+        <select id="C">
+        </select>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        var diction1 = {
+            A1: ["MBA", "ExecutiveMBA", "MScArtificialIntelligence", "MScAppliedFinance"],
+            A2: ["B.B.A. – Business Analytics", "B.B.A.", "B.Com."],
+            A3: ["Banking & Finance Management", "Business Management", "Financial Management",
+                "Human Resource Management", "International Trade Management",
+                "Marketing Management", "Operations Management",
+                "Retail Management", "Supply Chain Management"
+            ],
+            A4: ["Business Management", "Corporate Communication", "Information Technology Management",
+                "Operations Management", "Project Management"
+            ],
+
+        }
+        var diction = {
+            MBA: ["Banking & Finance", "Business Management", "Financial Management", "Human Resource Management",
+                "I.T. & Systems Management", "International Trade Management", "Marketing Management", "Operations Management", "Retail Management",
+                "Supply Chain Management"
+            ],
+            ExecutiveMBA: ["Applied Finance", "Business Analytics", "Leadership & Strategy", "Marketing Management", "Operations & Supply Chain"],
+            MScArtificialIntelligence: ["Deep Learning", "DevOps"],
+            MScAppliedFinance: [],
+
+        }
+
+        // bind change event handler
+        $('#A').change(function() {
+            // get the second dropdown
+            $('#B').html(
+                    // get array by the selected value
+                    diction1[this.value]
+                    // iterate  and generate options
+                    .map(function(v) {
+                        // generate options with the array element
+                        return $('<option/>', {
+                            value: v,
+                            text: v
+                        })
+                    })
+                )
+                // trigger change event to generate second select tag initially
+        }).change()
+        $('#B').change(function() {
+            // get the second dropdown
+            $('#C').html(
+                    // get array by the selected value
+                    diction[this.value]
+                    // iterate  and generate options
+                    .map(function(v) {
+                        // generate options with the array element
+                        return $('<option/>', {
+                            value: v,
+                            text: v
+                        })
+                    })
+                )
+                // trigger change event to generate second select tag initially
+        }).change()
+    </script>
+</body>
+
+</html>

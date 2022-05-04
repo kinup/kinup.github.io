@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+</head>
+
+<body>
+
+    <form id="dynamicForm" name="contact-form1" onsubmit="return mysubmit();">
+        <select id="A" onchange="showDropdown2(this)">
+            <option value="">Select</option>
+            <option value="PGDegree">PG Degree</option>
+            <option value="UGDegree">UG Degree</option>
+            <option value="oneYear">1-Year Diplomas</option>
+            <option value="sixMonths">6-month Certificates</option>
+        </select>
+        <select id="PGDegree_Dropdown" style="display: none;" onchange="showDropdown3(this)">
+            <option value="">Select</option>
+            <option value="MBA">MBA</option>
+            <option value="ExecutiveMBA">Executive MBA</option>
+            <option value="MSAI">M.Sc. Artificial Intelligence</option>
+            <option value="m-sc-in-applied-finance.html">M.Sc. Applied Finance</option>
+        </select>
+        <select id="UGDegree_Dropdown" style="display: none; ">
+            <option value="">Select</option>
+            <option value="bachelor-in-business-administration-business-analytics.html">B.B.A. – Business Analytics</option>
+            <option value="bachelor-in-business-administration.html">B.B.A.</option>
+            <option value="bachelor-of-commerce.html">B.Com.</option>
+        </select>
+        <select id="diplomaCourse" style="display: none; ">
+            <option value="diploma-in-banking-and-finance.html">Banking & Finance Management</option>
+            <option value="diploma-in-business-management.html">Business Management</option>
+            <option value="diploma-in-financial-management.html">Financial Management</option>
+            <option value="diploma-in-human-resource-management.html">Human Resource Management</option>
+            <option value="diploma-in-international-trade-management-2">International Trade Management</option>
+            <option value="diploma-in-marketing-management.html">Marketing Management</option>
+            <option value="diploma-in-operations-management.html">Operations Management</option>
+            <option value="diploma-in-retail-management.html">Retail Management</option>
+            <option value="diploma-in-supply-chain-management.html">Supply Chain Management</option>
+        </select>
+        <select id="certificateCourse" style="display: none; ">
+            <option value="certificate-program-in-business-management.html">Business Management</option>
+            <option value="certificate-program-in-corporate-communications.html">Corporate Communication</option>
+            <option value="certificate-program-in-it-management.html">Information Technology Management</option>
+            <option value="certificate-program-in-operations-management.html">Operations Management</option>
+            <option value="certificate-program-in-project-management.html">Project Management</option>
+        </select>
+        <select id="MBA_dropdown" style="display: none; ">
+            <option value="mba-banking-and-finance-management.html">Banking & Finance</option>
+            <option value="mba-business-management.html">Business Management</option>
+            <option value="mba-financial-management.html">Financial Management</option>
+            <option value="mba-human-resource-management">Human Resource Management</option>
+            <option value="mba-information-technology-and-systems-management.html">I.T. & Systems Management</option>
+            <option value="mba-international-trade-management.html">International Trade Management</option>
+            <option value="mba-marketing-management.html">Marketing Management</option>
+            <option value="mba-operations-management.html">Operations Management</option>
+            <option value="mba-retail-management.html">Retail Management</option>
+            <option value="mba-supply-chain-management.html">Supply Chain Management</option>
+        </select>
+        <select id="ExecutiveMBA_dropdown" style="display: none; ">
+            <option value="mba-working-executive.html">Applied Finance</option>
+            <option value="mba-executive-with-specialisation-in-business-analytics.html">Business Analytics</option>
+            <option value="mba-working-executive.html">Leadership & Strategy</option>
+            <option value="mba-working-executive.html">Marketing Management</option>
+            <option value="mba-working-executive.html">Operations & Supply Chain</option>
+        </select>
+        <select id="MSCAI_dropdown" style="display: none; ">
+            <option value="master-of-science-in-artificial-intelligence.html">Deep Learning</option>
+            <option value="master-of-science-in-artificial-intelligence.html">DevOps</option>
+        </select>
+        <select id="empty_dropdown1">
+            <option value=" ">---</option>
+            
+        </select>
+        <select id="empty_dropdown2">
+            <option value=" ">---</option>
+        </select>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js "></script>
+    <script src="js/findaprogram.js"></script>
+    <script>
+        document.getElementById('dynamicForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            if ($('#UGDegree_Dropdown').hasClass('active')) {
+                console.log('UG')
+                window.location = (document.getElementById('UGDegree_Dropdown').value);
+            } else if ($('#diplomaCourse').hasClass('active')) {
+                console.log('DC')
+                window.location = (document.getElementById('diplomaCourse').value);
+            } else if ($('#certificateCourse').hasClass('active')) {
+                console.log('CC')
+                window.location = (document.getElementById('certificateCourse').value);
+            } else if ($('#MBA_dropdown').hasClass('active')) {
+                console.log('MBA')
+                window.location = (document.getElementById('MBA_dropdown').value);
+            } else if ($('#ExecutiveMBA_dropdown').hasClass('active')) {
+                console.log('Ex')
+                window.location = (document.getElementById('ExecutiveMBA_dropdown').value);
+            } else if ($('#MSCAI_dropdown').hasClass('active')) {
+                console.log('MS')
+                window.location = (document.getElementById('MSCAI_dropdown').value);
+            }
+            // window.location = (document.getElementById('UGDegree_Dropdown').value);
+        })
+    </script>
+</body>
+
+</html>
