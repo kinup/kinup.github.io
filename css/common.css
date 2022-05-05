@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900');
+body {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+
+/* Header CSS */
+
+header {
+    width: 100%;
+    height: 105px;
+    background-color: white;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 20%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+.container {
+    max-width: 1600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.nmims-logo {
+    background: url(../images/nmims-logo.jpg) no-repeat 0 0;
+    display: block;
+    width: 381px;
+    height: 80px;
+    background-size: 70%;
+}
+
+.karma-logo {
+    background: url(../images/karma-logo.jpg) no-repeat right 0;
+    display: block;
+    width: 203px;
+    height: 80px;
+    background-size: 85%;
+}
+
+.navigation {
+    /* border: 1px solid green; */
+    display: flex;
+    margin: 0 25px 0 0;
+    width: calc(100% - 600px);
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.navigation a {
+    /* margin-right: 30px; */
+    padding: 0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: black;
+}
+
+.navigation a.active,
+.navigation a:hover {
+    color: #ff5421;
+}
+
+.white-color {
+    color: #ffffff !important;
+}
+
+.rs-breadcrumbs {
+    position: relative;
+}
+
+.rs-breadcrumbs .breadcrumbs-img img {
+    width: 100%;
+}
+
+.rs-breadcrumbs .breadcrumbs-text {
+    position: absolute;
+    top: 35% !important;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.rs-breadcrumbs .breadcrumbs-text.white-color .page-title {
+    color: #ffffff;
+}
+
+.rs-breadcrumbs .breadcrumbs-text .page-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ff5421;
+}
+
+.banner1 {
+    padding: 0 !important;
+    max-height: 250px;
+    margin-top: 100px;
+    overflow: hidden;
+}
+
+.mt-60 {
+    margin-top: 60px !important;
+}
+
+.card-body.acc-content .content .clearfix {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 8px 10px;
+}
+
+.card-body.acc-content .content h5 {
+    margin-bottom: 15px;
+}
+
+.rs-single-shop .tab-content {
+    padding: 25px;
+    border: 1px solid #ff5421;
+    margin-top: -1px;
+}
+
+.selectClass {
+    padding: 15px;
+    width: 100%;
+    appearance: none;
+    background: url(../images/down_arrow.png) no-repeat 97% center #fff;
+}
+
+.selectClass1 {
+    padding: 15px;
+    width: 80%;
+    appearance: none;
+    background: url(../images/down_arrow.png) no-repeat 97% center #fff;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.rs-newsletter.style1 .newsletter-wrap .newsletter-form button {
+    padding: 15px 20px !important;
+    margin-top: 34px;
+    background-color: #ff5421 !important;
+}
+
+.rs-footer.home9-style.main-home .footer-bottom {
+    padding: 20px 0 !important;
+}
+
+.intro-video.media-icon a {
+    display: block;
+    padding: 10px;
+    background-color: #ff5421 !important;
+    color: #fff;
+}
