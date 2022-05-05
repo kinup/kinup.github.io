@@ -23,6 +23,12 @@ header {
     z-index: 9999;
 }
 
+header .container {
+    padding: 0 60px;
+    display: flex;
+    max-width: 100%;
+}
+
 .container {
     max-width: 1600px;
     display: flex;
