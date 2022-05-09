@@ -14,6 +14,7 @@
     <link rel="stylesheet " href="css/common.css " />
     <link rel="stylesheet" href="css/rs-spacing.css" />
     <link rel="stylesheet " href="css/style.css " />
+    <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet " href="css/homepage.css " />
     <title>Karma Education</title>
 </head>
@@ -32,7 +33,24 @@
             </div>
             <a href="index.html" class="karma-logo "></a>
         </div>
+        <div class="mobile-menu">
+            <div class="stripline"></div>
+            <div class="stripline"></div>
+            <div class="stripline"></div>
+        </div>
     </header>
+    <!-- mobile menu starts-->
+    <div class="mobilemenuclick" style="display: none;">
+        <ul>
+            <li><a href="who-we-are.html " class=" ">Who we are</a></li>
+            <li><a href="what-you-get.html " class=" ">What you get</a></li>
+            <li><a href="nmims-edge.html " class=" ">The NMIMS Edge</a></li>
+            <li><a href="find-a-program.html " class=" ">Find a Program</a></li>
+            <li><a href="contact-us.html " class=" ">Reach us</a></li>
+        </ul>
+    </div>
+    <!-- mobile menu ends -->
+
     <!-- Banner -->
     <div class="container-fluid banner ">
         <div class="home-demo">
@@ -196,7 +214,7 @@
         </div>
     </div>
 
-    <footer id="rs-footer" class="rs-footer home9-style main-home m-0">
+    <footer id="rs-footer" class="rs-footer home9-style main-home mt-50">
 
         <div class="footer-bottom pt-10 pb-10">
             <div class="container-fluid">
@@ -243,7 +261,7 @@
                 margin: 0,
                 loop: true,
                 dots: false,
-                autoplay: true,
+                // autoplay: true,
                 autoplayHoverPause: true
                     // nav: true,
                     // navText: [

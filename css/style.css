@@ -15651,12 +15651,13 @@ body .modal-backdrop {
 }
 
 .rs-single-shop .tab-area ul.nav-tabs li a {
-    padding: 10px 15px;
+    padding: 10px;
     display: inline-block;
     border-radius: 5px 5px 0 0;
     background: #f0f0f0;
     color: #111111;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .rs-single-shop .tab-area ul.nav-tabs li a:hover,
@@ -17652,7 +17653,7 @@ body .modal-backdrop {
 }
 
 .rs-footer.home9-style.main-home .footer-bottom .copy-right-menu li:first-child:before {
-    display: none;
+    /* display: none; */
 }
 
 .rs-footer.home9-style.main-home .footer-bottom:before {

@@ -171,3 +171,97 @@ header .container {
     background-color: #ff5421 !important;
     color: #fff;
 }
+
+.mobile-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer-bottom .row.y-middle {
+        flex-direction: column;
+    }
+    .footer-bottom .row.y-middle .copy-right-menu {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 20px 0;
+    }
+    .footer-bottom .row.y-middle .copyright {
+        text-align: left;
+    }
+    .rs-footer.home9-style.main-home .footer-bottom .copy-right-menu li:first-child {
+        padding-left: 25px !important;
+    }
+    header .container {
+        padding: 0 20px;
+        justify-content: flex-start;
+    }
+    .navigation {
+        display: none;
+    }
+    header {
+        height: 80px;
+        position: relative;
+    }
+    .nmims-logo,
+    .karma-logo {
+        height: 50px;
+    }
+    .nmims-logo {
+        width: 150px;
+        background-size: 100%;
+    }
+    .karma-logo {
+        width: 120px;
+    }
+    .mobile-menu {
+        display: flex;
+        height: 30px;
+        position: absolute;
+        right: 15px;
+        width: 30px;
+        align-items: center;
+        justify-content: space-evenly;
+        top: 25px;
+        flex-direction: column;
+        cursor: pointer;
+    }
+    .stripline {
+        width: 90%;
+        height: 3px;
+        background-color: black;
+    }
+    .banner {
+        height: calc(100vh - 80px) !important;
+        margin-top: 0 !important;
+    }
+    .mobilemenuclick {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0px;
+        margin: 5px 0;
+    }
+    .mobilemenuclick ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0px;
+        margin: 5px 0;
+    }
+    .mobilemenuclick ul li {
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 0 30px;
+    }
+    .mobilemenuclick ul li:last-child {
+        border-bottom: none;
+    }
+    .mobilemenuclick ul li a {
+        color: #ff5421;
+    }
+    .banner1 {
+        margin-top: 0;
+    }
+}
