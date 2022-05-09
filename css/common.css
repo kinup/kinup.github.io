@@ -234,6 +234,7 @@ header .container {
     .banner {
         height: calc(100vh - 80px) !important;
         margin-top: 0 !important;
+        overflow: initial !important;
     }
     .mobilemenuclick {
         display: flex;
@@ -263,5 +264,76 @@ header .container {
     }
     .banner1 {
         margin-top: 0;
+    }
+    .rs-single-shop .tab-area ul.nav-tabs li {
+        margin-right: 0 !important;
+        width: 100% !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+    .rs-single-shop .tab-area ul.nav-tabs li a {
+        width: 100%;
+    }
+    .rs-breadcrumbs .breadcrumbs-text {
+        top: 40% !important;
+    }
+    .slider-content .container {
+        padding: 0 15px;
+    }
+    .slider-content .content-part {
+        padding: 40px 15px 0 !important;
+    }
+    .slider-content .content-part .sl-sub-title.pt-80,
+    .slider-content .content-part .sl-sub-title {
+        padding-top: 0;
+        font-size: 20px !important;
+        line-height: 30px !important;
+        text-transform: none !important;
+    }
+    .feature .cards {
+        width: 94% !important;
+        height: auto;
+        padding: 15px !important;
+        margin-bottom: 15px;
+    }
+    .feature {
+        position: relative !important;
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+    }
+    .slider-content .content-part .sl-title {
+        font-size: 30px !important;
+        line-height: 42px !important;
+    }
+    .container {
+        padding: 0 20px !important;
+    }
+    .whoBanner {
+        margin: 160px auto 30px;
+    }
+    .rs-cta.main-home .partition-bg-wrap {
+        padding: inherit;
+    }
+    .rs-cta.main-home .partition-bg-wrap:after,
+    .rs-cta.main-home .partition-bg-wrap:before {
+        width: 100% !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+    .coursesWrap {
+        flex-direction: column !important;
+    }
+    .rs-blog.main-home .blog-item {
+        width: 100% !important;
+    }
+    .width-100 {
+        margin: 0;
+    }
+    .selectClass1 {
+        width: 100% !important;
+    }
+    .rs-newsletter.style1 .newsletter-wrap .newsletter-form button {
+        width: 100% !important;
+        position: relative !important;
     }
 }
