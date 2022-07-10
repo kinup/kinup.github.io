@@ -358,4 +358,7 @@ header .container {
         width: 100% !important;
         position: relative !important;
     }
+    .sm-hide {
+        display: none;
+    }
 }
