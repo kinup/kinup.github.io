@@ -63,636 +63,726 @@
         </div>
     </div>
 
-    <section class="intro-section gray-bg pt-94 pb-100 md-pt-64 md-pb-70 loaded">
+    <section class="intro-section gray-bg pt-30 pb-100 md-pt-64 md-pb-70 loaded">
         <div class="container-fluid">
-            <div class="row clearfix">
-                <!-- Content Column -->
-                <div class="col-lg-8 md-mb-50">
-                    <!-- Intro Info Tabs-->
-                    <div class="intro-info-tabs">
-                        <ul class="nav nav-tabs intro-tabs tabs-box" id="myTab" role="tablist">
-                            <li class="nav-item tab-btns">
-                                <a class="nav-link tab-btn active" id="prod-overview-tab" data-toggle="tab" href="#prod-overview" role="tab" aria-controls="prod-overview" aria-selected="false">Program Features</a>
-                            </li>
-                            <li class="nav-item tab-btns">
-                                <a class="nav-link tab-btn" id="prod-curriculum-tab" data-toggle="tab" href="#prod-curriculum" role="tab" aria-controls="prod-curriculum" aria-selected="false">Program Curriculum </a>
-                            </li>
-                            <!-- <li class="nav-item tab-btns">
-                                <a class="nav-link tab-btn" id="prod-instructor-tab
-                                " data-toggle="tab" href="#prod-instructor" role="tab" aria-controls="prod-instructor" aria-selected="false">Instructor</a>
-                            </li> -->
-                            <li class="nav-item tab-btns">
-                                <a class="nav-link tab-btn" id="prod-faq-tab" data-toggle="tab" href="#prod-faq" role="tab" aria-controls="prod-faq" aria-selected="false">Career Options</a>
-                            </li>
-                            <li class="nav-item tab-btns">
-                                <a class="nav-link tab-btn " id="prod-reviews-tab" data-toggle="tab" href="#prod-reviews" role="tab" aria-controls="prod-reviews" aria-selected="true">Eligibility & Program Fee</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content tabs-content" id="myTabContent">
-                            <div class="tab-pane tab fade  active show" id="prod-overview" role="tabpanel" aria-labelledby="prod-overview-tab">
-                                <div class="content white-bg pt-30">
-                                    <!-- Cource Overview -->
-                                    <div class="course-overview">
-                                        <div class="inner-box">
-                                            <h4 class="primary">Program Features</h4>
-                                            <h3>Highlights</h3>
+            <div class="rs-newsletter style1 orange-color mt-30 mb-50">
+                <div class="">
+                    <div class="newsletter-wrap">
+                        <div class="row y-middle">
+                            <form class="newsletter-form d-flex width-100" id="dynamicForm" name="contact-form1" onsubmit="return mysubmit();">
+                                <div class="row width-100">
+                                    <div class="col-lg-4 col-md-12 md-mb-30">
+                                        <label class="white-color">Program Type</label>
+                                        <!-- <i class="fa fa-angle-down"></i> -->
+                                        <select id="A" class="selectClass" onchange="showDropdown2(this)">
+                                            <option value="">Select</option>
+                                            <option value="PGDegree">PG Degree</option>
+                                            <option value="UGDegree">UG Degree</option>
+                                            <option value="oneYear">1-Year Diplomas</option>
+                                            <option value="sixMonths">6-month Certificates</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4 col-md-12">
+                                        <label class="white-color">Choose a Program</label>
+                                        <!-- <i class="fa fa-angle-down"></i> -->
+                                        <select id="empty_dropdown1" class="selectClass">
+                                            <option value=" ">---</option>
+                                        </select>
+                                        <select class="selectClass" id="PGDegree_Dropdown" style="display: none;" onchange="showDropdown3(this)">
+                                        <option value="">Select</option>
+                                        <option value="MBA">MBA</option>
+                                        <option value="ExecutiveMBA">Executive MBA</option>
+                                        <option value="MSAI">M.Sc. Artificial Intelligence</option>
+                                        <option value="MSAF">M.Sc. Applied Finance</option>
+                                    </select>
+                                        <select class="selectClass" id="UGDegree_Dropdown" style="display: none; ">
+                                        <option value="">Select</option>
+                                        <option value="bachelor-in-business-administration-business-analytics.html">B.B.A. – Business Analytics</option>
+                                        <option value="bachelor-in-business-administration.html">B.B.A.</option>
+                                        <option value="bachelor-of-commerce.html">B.Com.</option>
+                                    </select>
+                                        <select class="selectClass" id="diplomaCourse" style="display: none; ">
+                                        <option value="diploma-in-banking-and-finance.html">Banking & Finance Management</option>
+                                        <option value="diploma-in-business-management.html">Business Management</option>
+                                        <option value="diploma-in-financial-management.html">Financial Management</option>
+                                        <option value="diploma-in-human-resource-management.html">Human Resource Management</option>
+                                        <option value="diploma-in-international-trade-management-2">International Trade Management</option>
+                                        <option value="diploma-in-marketing-management.html">Marketing Management</option>
+                                        <option value="diploma-in-operations-management.html">Operations Management</option>
+                                        <option value="diploma-in-retail-management.html">Retail Management</option>
+                                        <option value="diploma-in-supply-chain-management.html">Supply Chain Management</option>
+                                    </select>
+                                        <select class="selectClass" id="certificateCourse" style="display: none; ">
+                                        <option value="certificate-program-in-business-management.html">Business Management</option>
+                                        <option value="certificate-program-in-corporate-communications.html">Corporate Communication</option>
+                                        <option value="certificate-program-in-it-management.html">Information Technology Management</option>
+                                        <option value="certificate-program-in-operations-management.html">Operations Management</option>
+                                        <option value="certificate-program-in-project-management.html">Project Management</option>
+                                    </select>
+                                    </div>
+                                    <div class="col-lg-4 col-md-12">
+                                        <label class="white-color">Choose Specialization</label>
+                                        <select id="empty_dropdown2" class="selectClass1">
+                                        <option value=" ">---</option>
+                                    </select>
+                                        <select class="selectClass1" id="MBA_dropdown" style="display: none; ">
+                                        <option value="mba-banking-and-finance-management.html">Banking & Finance</option>
+                                        <option value="mba-business-management.html">Business Management</option>
+                                        <option value="mba-financial-management.html">Financial Management</option>
+                                        <option value="mba-human-resource-management">Human Resource Management</option>
+                                        <option value="mba-information-technology-and-systems-management.html">I.T. & Systems Management</option>
+                                        <option value="mba-international-trade-management.html">International Trade Management</option>
+                                        <option value="mba-marketing-management.html">Marketing Management</option>
+                                        <option value="mba-operations-management.html">Operations Management</option>
+                                        <option value="mba-retail-management.html">Retail Management</option>
+                                        <option value="mba-supply-chain-management.html">Supply Chain Management</option>
+                                    </select>
+                                        <select class="selectClass1" id="ExecutiveMBA_dropdown" style="display: none; ">
+                                        <option value="mba-working-executive.html">Applied Finance</option>
+                                        <option value="mba-executive-with-specialisation-in-business-analytics.html">Business Analytics</option>
+                                        <option value="mba-working-executive.html">Leadership & Strategy</option>
+                                        <option value="mba-working-executive.html">Marketing Management</option>
+                                        <option value="mba-working-executive.html">Operations & Supply Chain</option>
+                                    </select>
+                                        <select class="selectClass1" id="MSCAI_dropdown" style="display: none; ">
+                                        <option value="master-of-science-in-artificial-intelligence.html">Deep Learning</option>
+                                        <option value="master-of-science-in-artificial-intelligence.html">DevOps</option>
+                                    </select>
 
-                                            <ul class="review-list">
-                                                <li>The Bachelor in Business Administration program (Blended and ODL mode) is designed to enable students to become industry ready managers.</li>
-                                                <li>Equips students with requisite professional education and knowledge in business management for adding value to the industry and advancing learning.</li>
-                                                <li>Provides state-of-the-art infrastructure to students, to support and propel their career paths, may it be managerial, administrative or entrepreneurial.</li>
-                                                <li>Provides students with skills-based learning to give them a competitive edge in employability.</li>
-                                            </ul>
-                                            <h3>Outcomes</h3>
-                                            <ul class="review-list">
-                                                <li>Demonstrate a clear grasp of the concepts of business management across functional domains.</li>
-                                                <li>Critically think and analyse business problems.</li>
-                                                <li>Apply sensitivity to social, sustainable and ethical aspects, challenges and actively incorporate nuances of conducting business responsibly in today’s day and age.</li>
-                                                <li>Develop and apply business models and frameworks to solve real-world business problems.</li>
-                                                <li>Effectively communicate verbally and non-verbally in the digital world, in teams, and cross-culturally.</li>
-                                                <li>Develop and display entrepreneurship acumen, innovation in ideating business plans, and understanding of start-up ecosystem in the country and globally.</li>
-                                            </ul>
-                                        </div>
+                                        <button type="submit">Submit</button>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="tab-pane fade" id="prod-curriculum" role="tabpanel" aria-labelledby="prod-curriculum-tab">
-                                <div class="content">
-                                    <div id="accordion31" class="accordion-box">
-                                        <div class="card accordion block">
-                                            <div class="card-header" id="headingSeven1">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven1" aria-expanded="false" aria-controls="collapseSeven1">Semester 1</button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseSeven1" class="collapse" aria-labelledby="headingSeven1" data-parent="#accordion31" style="">
-                                                <div class="card-body acc-content">
-                                                    <div class="content">
-                                                        <div class="clearfix">
-                                                            <div class="pull-left primary">
-                                                                Subjects
-                                                            </div>
-                                                            <div class="pull-right primary">
-                                                                Credits
-                                                            </div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Essentials of Management
-                                                            </div>
-                                                            <div class="pull-right">
-                                                                4
-                                                            </div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Business Communication
-                                                            </div>
-                                                            <div class="pull-right">
-                                                                4
-                                                            </div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Essentials of Financial Accounting
-                                                            </div>
-                                                            <div class="pull-right">
-                                                                4
-                                                            </div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Micro Economics
-                                                            </div>
-                                                            <div class="pull-right">
-                                                                4
-                                                            </div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Essentials of IT
-                                                            </div>
-                                                            <div class="pull-right">
-                                                                4
-                                                            </div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Organisational Behavior
-                                                            </div>
-                                                            <div class="pull-right">
-                                                                4
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card accordion block">
-                                            <div class="card-header" id="headingSeven2">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven2" aria-expanded="false" aria-controls="collapseSeven2">Semester 2</button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseSeven2" class="collapse" aria-labelledby="headingSeven2" data-parent="#accordion31" style="">
-                                                <div class="card-body acc-content">
-                                                    <div class="content">
-                                                        <div class="clearfix">
-                                                            <div class="pull-left primary">
-                                                                Subjects
-                                                            </div>
-                                                            <div class="pull-right primary">
-                                                                Credits
-                                                            </div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Business Statistics for Decision Making
-                                                            </div>
-                                                            <div class="pull-right">
-                                                                4
-                                                            </div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Macro Economics
-                                                            </div>
-                                                            <div class="pull-right">
-                                                                4
-                                                            </div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Principles of Marketing
-                                                            </div>
-                                                            <div class="pull-right">
-                                                                4
-                                                            </div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Cost and Management Accounting
-                                                            </div>
-                                                            <div class="pull-right">
-                                                                4
-                                                            </div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Operations Research
-                                                            </div>
-                                                            <div class="pull-right">
-                                                                4
-                                                            </div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Environment and Disaster Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="card accordion block">
-                                            <div class="card-header" id="headingSeven3">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven3" aria-expanded="false" aria-controls="collapseSeven3">Semester 3</button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseSeven3" class="collapse" aria-labelledby="headingSeven3" data-parent="#accordion31" style="">
-                                                <div class="card-body acc-content">
-                                                    <div class="content">
-                                                        <div class="clearfix">
-                                                            <div class="pull-left primary">
-                                                                Subjects
-                                                            </div>
-                                                            <div class="pull-right primary">Credits</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Business and Allied Laws
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Digital Marketing
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Financial Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Human Resource Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Consumer Behaviour
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card accordion block">
-                                            <div class="card-header" id="headingSeven4">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven4" aria-expanded="false" aria-controls="collapseSeven4">Semester 4</button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseSeven4" class="collapse" aria-labelledby="headingSeven4" data-parent="#accordion31" style="">
-                                                <div class="card-body acc-content">
-                                                    <div class="content">
-                                                        <div class="clearfix">
-                                                            <div class="pull-left primary">
-                                                                Subjects
-                                                            </div>
-                                                            <div class="pull-right primary">Credits</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Performance Management System
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Research Methodology
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Introduction to Analytics
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Sales Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Production & Total Quality Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Fundamentals of Taxation
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card accordion block">
-                                            <div class="card-header" id="headingSeven5">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven5" aria-expanded="false" aria-controls="collapseSeven5">Semester 5 - Marketing</button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseSeven5" class="collapse" aria-labelledby="headingSeven5" data-parent="#accordion31" style="">
-                                                <div class="card-body acc-content">
-                                                    <div class="content">
-                                                        <div class="clearfix">
-                                                            <div class="pull-left primary">
-                                                                Subjects
-                                                            </div>
-                                                            <div class="pull-right primary">Credits</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Customer Relationship Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Financial Statement Analysis
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Entrepreneurship Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Project
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Strategic Brand Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Rural Marketing
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card accordion block">
-                                            <div class="card-header" id="headingSeven6">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven6" aria-expanded="false" aria-controls="collapseSeven6">Semester 5 - Finance</button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseSeven6" class="collapse" aria-labelledby="headingSeven6" data-parent="#accordion31" style="">
-                                                <div class="card-body acc-content">
-                                                    <div class="content">
-                                                        <div class="clearfix">
-                                                            <div class="pull-left primary">
-                                                                Subjects
-                                                            </div>
-                                                            <div class="pull-right primary">Credits</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Customer Relationship Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Financial Statement Analysis
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Entrepreneurship Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Project
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Financial Institutions & Markets
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Corporate Finance
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card accordion block">
-                                            <div class="card-header" id="headingSeven7">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven7" aria-expanded="false" aria-controls="collapseSeven7">Semester 6 - Marketing</button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseSeven7" class="collapse" aria-labelledby="headingSeven6" data-parent="#accordion31" style="">
-                                                <div class="card-body acc-content">
-                                                    <div class="content">
-                                                        <div class="clearfix">
-                                                            <div class="pull-left primary">
-                                                                Subjects
-                                                            </div>
-                                                            <div class="pull-right primary">Credits</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Strategic Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Project Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Operations and Supply Chain Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Business Ethics and Corporate Governance
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                International Marketing
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Integrated Marketing Communication
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="card accordion block">
-                                            <div class="card-header" id="headingSeven8">
-                                                <h5 class="mb-0">
-                                                    <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven8" aria-expanded="false" aria-controls="collapseSeven8">Semester 6 - Finance</button>
-                                                </h5>
-                                            </div>
-                                            <div id="collapseSeven8" class="collapse" aria-labelledby="headingSeven8" data-parent="#accordion31" style="">
-                                                <div class="card-body acc-content">
-                                                    <div class="content">
-                                                        <div class="clearfix">
-                                                            <div class="pull-left primary">
-                                                                Subjects
-                                                            </div>
-                                                            <div class="pull-right primary">Credits</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Strategic Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Project Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Operations and Supply Chain Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Business Ethics and Corporate Governance
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Investment Analysis and Portfolio Management
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                        <div class="clearfix">
-                                                            <div class="pull-left">
-                                                                Financial Modelling
-                                                            </div>
-                                                            <div class="pull-right">4</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="prod-faq" role="tabpanel" aria-labelledby="prod-faq-tab">
-                                <div class="content pt-30 pb-30 white-bg">
-
-                                    <div class="cource-review-box mb-30">
-                                        <h5 class="primary">Assistant Manager – Marketing</h5>
-                                        <div class="text">Support the work of marketing managers and executives on projects directed at maximising company profits and developing sales strategies or marketing.</div>
-                                    </div>
-                                    <div class="cource-review-box mb-30">
-                                        <h5 class="primary">Assistant Manager – Finance</h5>
-                                        <div class="text">Assist the finance manager in tasks like billing invoices, attending day to day technical finance requests for purchase orders, making budgets, etc. in the interest of the organisation.</div>
-                                    </div>
-                                    <div class="cource-review-box mb-30">
-                                        <h5 class="primary">Assistant Manager – HR</h5>
-                                        <div class="text">Act as the liaison between HR and employees, ensuring smooth communication and prompt resolution of requests and questions.</div>
-                                    </div>
-                                    <div class="cource-review-box mb-30">
-                                        <h5 class="primary">Higher studies (MBA/PGDBM) in Management Domains</h5>
-                                        <div class="text"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="prod-reviews" role="tabpanel" aria-labelledby="prod-reviews-tab">
-                                <div class="content pt-30 pb-30 white-bg">
-                                    <div class="cource-review-box mb-30">
-                                        <div class="text mb-10">HSC (10+2) in any discipline from a recognized Board with minimum 50%.
-                                        </div> OR
-                                        <div class="text">HSC (10+2) in any discipline from a recognized Board with 45% and minimum 2 years work experience.
-                                        </div>OR
-                                        <div class="text">SSC (10) + 3 years Diploma recognized by AICTE with 55%
-                                        </div>
-
-                                        <div class="rs-single-shop shop-rp orange-color pb-30">
-                                            <div class="tab-area">
-                                                <ul class="nav nav-tabs mb-0">
-                                                    <li><a class="active" href="#opt1" data-toggle="tab">Option 1: Full Fee Payment (in INR)</a></li>
-                                                    <li><a class="" href="#opt2" data-toggle="tab">Option 2: Annual payment (in INR)</a></li>
-                                                    <li><a class="" href="#opt3" data-toggle="tab">Option 3: Per Semester fee payment (INR)</a></li>
-                                                </ul>
-                                                <div class="tab-content">
-                                                    <div class="tab-pane active" id="opt1">
-                                                        <h2 class="primary mb-0">1,31,000/-
-                                                            <span class="text">Full fee payment</span></h2>
-                                                        <p>Admission Processing Fee : 1,200/-</p>
-                                                    </div>
-                                                    <div class="tab-pane" id="opt2">
-                                                        <h2 class="primary mb-0">47,000/-
-                                                            <span class="text">Program fee per year</span></h2>
-                                                        <p>Admission Processing Fee : 1,200/-<br> No. of Years 3</p>
-                                                    </div>
-                                                    <div class="tab-pane" id="opt3">
-                                                        <h2 class="primary mb-0">25,000/-
-                                                            <span class="text">Program fee
-                                                                per semester</span></h2>
-                                                        <p>Admission Processing Fee : 1,200/-<br> No. of semesters 6</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="text mb-15">
-                                            An initial amount of Rs. 5,000/- from the program fee will be collected at the time of registration.
-                                            <br>The University offers special incentives to our armed forces with a 20% concession on the program fee.
-                                            <br>The above-mentioned fee structure is subject to change at the discretion of the University. Any payment made via Demand Draft should be made in favour of “SVKM’s NMIMS” payable at Mumbai.
-                                            <br>In addition, Students need to pay an examination fee of Rs 600/- per subject.
-                                            <br>Now avail loan facility to pay fees for the Program even without a credit card.
-                                            <br>EMI Facility (3, 6, 9, 12 months) available via credit cards of the following banks: HDFC Bank, ICICI Bank, Axis Bank, Citi Bank, Standard Chartered Bank, HSBC Bank, Kotak Mahindra Bank.
-                                            <br>Program Structure and curriculum are subject to change at per the discretion of the University
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Video Column -->
-                <div class="video-column col-lg-4">
-                    <div class="inner-column">
-                        <!-- Video Box -->
-                        <div class="intro-video media-icon orange-color2">
-                            <img class="video-img" src="images/pg16.jpg" alt="Video Image">
-                            <a href="downloads/A4_Leaflet_B.Com-_-BBA.pdf">
-                                <i class="fa fa-download"></i> &nbsp; Download Brochure
-                            </a>
-                        </div>
-                        <!-- End Video Box -->
-                        <div class="course-features-info">
-                            <ul>
-                                <li class="lectures-feature">
-                                    <!-- <i class="fa fa-files-o"></i> -->
-                                    <span class="label">Duration </span>
-                                    <span class="value">36 Months<br>Blended and ODL Mode</span>
-                                </li>
-
-                                <li class="quizzes-feature">
-                                    <!-- <i class="fa fa-puzzle-piece"></i> -->
-                                    <span class="label">Batch Starts </span>
-                                    <span class="value">1st August, 2022</span>
-                                </li>
-
-                                <li class="duration-feature">
-                                    <!-- <i class="fa fa-clock-o"></i> -->
-                                    <span class="label">Finance Options </span>
-                                    <span class="value">Available </span>
-                                </li>
-                            </ul>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
+            <!-- Content Column -->
+            <div class="col-lg-8 md-mb-50">
+                <!-- Intro Info Tabs-->
+                <div class="intro-info-tabs">
+                    <ul class="nav nav-tabs intro-tabs tabs-box" id="myTab" role="tablist">
+                        <li class="nav-item tab-btns">
+                            <a class="nav-link tab-btn active" id="prod-overview-tab" data-toggle="tab" href="#prod-overview" role="tab" aria-controls="prod-overview" aria-selected="false">Program Features</a>
+                        </li>
+                        <li class="nav-item tab-btns">
+                            <a class="nav-link tab-btn" id="prod-curriculum-tab" data-toggle="tab" href="#prod-curriculum" role="tab" aria-controls="prod-curriculum" aria-selected="false">Program Curriculum </a>
+                        </li>
+                        <!-- <li class="nav-item tab-btns">
+                                <a class="nav-link tab-btn" id="prod-instructor-tab
+                                " data-toggle="tab" href="#prod-instructor" role="tab" aria-controls="prod-instructor" aria-selected="false">Instructor</a>
+                            </li> -->
+                        <li class="nav-item tab-btns">
+                            <a class="nav-link tab-btn" id="prod-faq-tab" data-toggle="tab" href="#prod-faq" role="tab" aria-controls="prod-faq" aria-selected="false">Career Options</a>
+                        </li>
+                        <li class="nav-item tab-btns">
+                            <a class="nav-link tab-btn " id="prod-reviews-tab" data-toggle="tab" href="#prod-reviews" role="tab" aria-controls="prod-reviews" aria-selected="true">Eligibility & Program Fee</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content tabs-content" id="myTabContent">
+                        <div class="tab-pane tab fade  active show" id="prod-overview" role="tabpanel" aria-labelledby="prod-overview-tab">
+                            <div class="content white-bg pt-30">
+                                <!-- Cource Overview -->
+                                <div class="course-overview">
+                                    <div class="inner-box">
+                                        <h4 class="primary">Program Features</h4>
+                                        <h3>Highlights</h3>
+
+                                        <ul class="review-list">
+                                            <li>The Bachelor in Business Administration program (Blended and ODL mode) is designed to enable students to become industry ready managers.</li>
+                                            <li>Equips students with requisite professional education and knowledge in business management for adding value to the industry and advancing learning.</li>
+                                            <li>Provides state-of-the-art infrastructure to students, to support and propel their career paths, may it be managerial, administrative or entrepreneurial.</li>
+                                            <li>Provides students with skills-based learning to give them a competitive edge in employability.</li>
+                                        </ul>
+                                        <h3>Outcomes</h3>
+                                        <ul class="review-list">
+                                            <li>Demonstrate a clear grasp of the concepts of business management across functional domains.</li>
+                                            <li>Critically think and analyse business problems.</li>
+                                            <li>Apply sensitivity to social, sustainable and ethical aspects, challenges and actively incorporate nuances of conducting business responsibly in today’s day and age.</li>
+                                            <li>Develop and apply business models and frameworks to solve real-world business problems.</li>
+                                            <li>Effectively communicate verbally and non-verbally in the digital world, in teams, and cross-culturally.</li>
+                                            <li>Develop and display entrepreneurship acumen, innovation in ideating business plans, and understanding of start-up ecosystem in the country and globally.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="prod-curriculum" role="tabpanel" aria-labelledby="prod-curriculum-tab">
+                            <div class="content">
+                                <div id="accordion31" class="accordion-box">
+                                    <div class="card accordion block">
+                                        <div class="card-header" id="headingSeven1">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven1" aria-expanded="false" aria-controls="collapseSeven1">Semester 1</button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseSeven1" class="collapse" aria-labelledby="headingSeven1" data-parent="#accordion31" style="">
+                                            <div class="card-body acc-content">
+                                                <div class="content">
+                                                    <div class="clearfix">
+                                                        <div class="pull-left primary">
+                                                            Subjects
+                                                        </div>
+                                                        <div class="pull-right primary">
+                                                            Credits
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Essentials of Management
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            4
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Business Communication
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            4
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Essentials of Financial Accounting
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            4
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Micro Economics
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            4
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Essentials of IT
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            4
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Organisational Behavior
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            4
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card accordion block">
+                                        <div class="card-header" id="headingSeven2">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven2" aria-expanded="false" aria-controls="collapseSeven2">Semester 2</button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseSeven2" class="collapse" aria-labelledby="headingSeven2" data-parent="#accordion31" style="">
+                                            <div class="card-body acc-content">
+                                                <div class="content">
+                                                    <div class="clearfix">
+                                                        <div class="pull-left primary">
+                                                            Subjects
+                                                        </div>
+                                                        <div class="pull-right primary">
+                                                            Credits
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Business Statistics for Decision Making
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            4
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Macro Economics
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            4
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Principles of Marketing
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            4
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Cost and Management Accounting
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            4
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Operations Research
+                                                        </div>
+                                                        <div class="pull-right">
+                                                            4
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Environment and Disaster Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="card accordion block">
+                                        <div class="card-header" id="headingSeven3">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven3" aria-expanded="false" aria-controls="collapseSeven3">Semester 3</button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseSeven3" class="collapse" aria-labelledby="headingSeven3" data-parent="#accordion31" style="">
+                                            <div class="card-body acc-content">
+                                                <div class="content">
+                                                    <div class="clearfix">
+                                                        <div class="pull-left primary">
+                                                            Subjects
+                                                        </div>
+                                                        <div class="pull-right primary">Credits</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Business and Allied Laws
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Digital Marketing
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Financial Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Human Resource Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Consumer Behaviour
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card accordion block">
+                                        <div class="card-header" id="headingSeven4">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven4" aria-expanded="false" aria-controls="collapseSeven4">Semester 4</button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseSeven4" class="collapse" aria-labelledby="headingSeven4" data-parent="#accordion31" style="">
+                                            <div class="card-body acc-content">
+                                                <div class="content">
+                                                    <div class="clearfix">
+                                                        <div class="pull-left primary">
+                                                            Subjects
+                                                        </div>
+                                                        <div class="pull-right primary">Credits</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Performance Management System
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Research Methodology
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Introduction to Analytics
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Sales Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Production & Total Quality Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Fundamentals of Taxation
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card accordion block">
+                                        <div class="card-header" id="headingSeven5">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven5" aria-expanded="false" aria-controls="collapseSeven5">Semester 5 - Marketing</button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseSeven5" class="collapse" aria-labelledby="headingSeven5" data-parent="#accordion31" style="">
+                                            <div class="card-body acc-content">
+                                                <div class="content">
+                                                    <div class="clearfix">
+                                                        <div class="pull-left primary">
+                                                            Subjects
+                                                        </div>
+                                                        <div class="pull-right primary">Credits</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Customer Relationship Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Financial Statement Analysis
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Entrepreneurship Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Project
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Strategic Brand Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Rural Marketing
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card accordion block">
+                                        <div class="card-header" id="headingSeven6">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven6" aria-expanded="false" aria-controls="collapseSeven6">Semester 5 - Finance</button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseSeven6" class="collapse" aria-labelledby="headingSeven6" data-parent="#accordion31" style="">
+                                            <div class="card-body acc-content">
+                                                <div class="content">
+                                                    <div class="clearfix">
+                                                        <div class="pull-left primary">
+                                                            Subjects
+                                                        </div>
+                                                        <div class="pull-right primary">Credits</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Customer Relationship Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Financial Statement Analysis
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Entrepreneurship Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Project
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Financial Institutions & Markets
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Corporate Finance
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card accordion block">
+                                        <div class="card-header" id="headingSeven7">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven7" aria-expanded="false" aria-controls="collapseSeven7">Semester 6 - Marketing</button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseSeven7" class="collapse" aria-labelledby="headingSeven6" data-parent="#accordion31" style="">
+                                            <div class="card-body acc-content">
+                                                <div class="content">
+                                                    <div class="clearfix">
+                                                        <div class="pull-left primary">
+                                                            Subjects
+                                                        </div>
+                                                        <div class="pull-right primary">Credits</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Strategic Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Project Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Operations and Supply Chain Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Business Ethics and Corporate Governance
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            International Marketing
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Integrated Marketing Communication
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card accordion block">
+                                        <div class="card-header" id="headingSeven8">
+                                            <h5 class="mb-0">
+                                                <button class="btn btn-link acc-btn collapsed" data-toggle="collapse" data-target="#collapseSeven8" aria-expanded="false" aria-controls="collapseSeven8">Semester 6 - Finance</button>
+                                            </h5>
+                                        </div>
+                                        <div id="collapseSeven8" class="collapse" aria-labelledby="headingSeven8" data-parent="#accordion31" style="">
+                                            <div class="card-body acc-content">
+                                                <div class="content">
+                                                    <div class="clearfix">
+                                                        <div class="pull-left primary">
+                                                            Subjects
+                                                        </div>
+                                                        <div class="pull-right primary">Credits</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Strategic Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Project Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Operations and Supply Chain Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Business Ethics and Corporate Governance
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Investment Analysis and Portfolio Management
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                    <div class="clearfix">
+                                                        <div class="pull-left">
+                                                            Financial Modelling
+                                                        </div>
+                                                        <div class="pull-right">4</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="prod-faq" role="tabpanel" aria-labelledby="prod-faq-tab">
+                            <div class="content pt-30 pb-30 white-bg">
+
+                                <div class="cource-review-box mb-30">
+                                    <h5 class="primary">Assistant Manager – Marketing</h5>
+                                    <div class="text">Support the work of marketing managers and executives on projects directed at maximising company profits and developing sales strategies or marketing.</div>
+                                </div>
+                                <div class="cource-review-box mb-30">
+                                    <h5 class="primary">Assistant Manager – Finance</h5>
+                                    <div class="text">Assist the finance manager in tasks like billing invoices, attending day to day technical finance requests for purchase orders, making budgets, etc. in the interest of the organisation.</div>
+                                </div>
+                                <div class="cource-review-box mb-30">
+                                    <h5 class="primary">Assistant Manager – HR</h5>
+                                    <div class="text">Act as the liaison between HR and employees, ensuring smooth communication and prompt resolution of requests and questions.</div>
+                                </div>
+                                <div class="cource-review-box mb-30">
+                                    <h5 class="primary">Higher studies (MBA/PGDBM) in Management Domains</h5>
+                                    <div class="text"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="prod-reviews" role="tabpanel" aria-labelledby="prod-reviews-tab">
+                            <div class="content pt-30 pb-30 white-bg">
+                                <div class="cource-review-box mb-30">
+                                    <div class="text mb-10">HSC (10+2) in any discipline from a recognized Board with minimum 50%.
+                                    </div> OR
+                                    <div class="text">HSC (10+2) in any discipline from a recognized Board with 45% and minimum 2 years work experience.
+                                    </div>OR
+                                    <div class="text">SSC (10) + 3 years Diploma recognized by AICTE with 55%
+                                    </div>
+
+                                    <div class="rs-single-shop shop-rp orange-color pb-30">
+                                        <div class="tab-area">
+                                            <ul class="nav nav-tabs mb-0">
+                                                <li><a class="active" href="#opt1" data-toggle="tab">Option 1: Full Fee Payment <br>(in INR)</a></li>
+                                                <li><a class="" href="#opt2" data-toggle="tab">Option 2: Annual payment <br>(in INR)</a></li>
+                                                <li><a class="" href="#opt3" data-toggle="tab">Option 3: Per Semester <br>fee payment (INR)</a></li>
+                                            </ul>
+                                            <div class="tab-content">
+                                                <div class="tab-pane active" id="opt1">
+                                                    <h2 class="primary mb-0">1,31,000/-
+                                                        <span class="text">Full fee payment</span></h2>
+                                                    <p>Admission Processing Fee : 1,200/-</p>
+                                                </div>
+                                                <div class="tab-pane" id="opt2">
+                                                    <h2 class="primary mb-0">47,000/-
+                                                        <span class="text">Program fee per year</span></h2>
+                                                    <p>Admission Processing Fee : 1,200/-<br> No. of Years 3</p>
+                                                </div>
+                                                <div class="tab-pane" id="opt3">
+                                                    <h2 class="primary mb-0">25,000/-
+                                                        <span class="text">Program fee
+                                                                per semester</span></h2>
+                                                    <p>Admission Processing Fee : 1,200/-<br> No. of semesters 6</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text mb-15">
+                                        An initial amount of Rs. 5,000/- from the program fee will be collected at the time of registration.
+                                        <br>The University offers special incentives to our armed forces with a 20% concession on the program fee.
+                                        <br>The above-mentioned fee structure is subject to change at the discretion of the University. Any payment made via Demand Draft should be made in favour of “SVKM’s NMIMS” payable at Mumbai.
+                                        <br>In addition, Students need to pay an examination fee of Rs 600/- per subject.
+                                        <br>Now avail loan facility to pay fees for the Program even without a credit card.
+                                        <br>EMI Facility (3, 6, 9, 12 months) available via credit cards of the following banks: HDFC Bank, ICICI Bank, Axis Bank, Citi Bank, Standard Chartered Bank, HSBC Bank, Kotak Mahindra Bank.
+                                        <br>Program Structure and curriculum are subject to change at per the discretion of the University
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Column -->
+            <div class="video-column col-lg-4">
+                <div class="inner-column">
+                    <!-- Video Box -->
+                    <div class="intro-video media-icon orange-color2">
+                        <img class="video-img" src="images/pg16.jpg" alt="Video Image">
+                        <a href="downloads/UG brochure 2022 -KEPL.pdf">
+                            <i class="fa fa-download"></i> &nbsp; Download Brochure
+                        </a>
+                        <a href="contact-us.html" class="mt-20">
+                            Enquire Form
+                        </a>
+                    </div>
+                    <!-- End Video Box -->
+                    <div class="course-features-info">
+                        <ul>
+                            <li class="lectures-feature">
+                                <!-- <i class="fa fa-files-o"></i> -->
+                                <span class="label">Duration </span>
+                                <span class="value">36 Months<br>Blended and ODL Mode</span>
+                            </li>
+
+
+
+                            <li class="duration-feature">
+                                <!-- <i class="fa fa-clock-o"></i> -->
+                                <span class="label">Finance Options </span>
+                                <span class="value">Available </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
 
@@ -739,6 +829,7 @@
     <script src="js/popper.min.js "></script>
     <script src="js/bootstrap.min.js "></script>
     <script src="js/owl.carousel.min.js "></script>
+    <script src="js/findaprogram.js"></script>
     <script>
         $(function() {
             // Owl Carousel

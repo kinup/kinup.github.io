@@ -199,34 +199,6 @@
     <script src="js/popper.min.js "></script>
     <script src="js/bootstrap.min.js "></script>
     <script src="js/findaprogram.js"></script>
-    <script>
-        document.getElementById('dynamicForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            if ($('#UGDegree_Dropdown').hasClass('active')) {
-                console.log('UG')
-                window.location = (document.getElementById('UGDegree_Dropdown').value);
-            } else if ($('#diplomaCourse').hasClass('active')) {
-                console.log('DC')
-                window.location = (document.getElementById('diplomaCourse').value);
-            } else if ($('#certificateCourse').hasClass('active')) {
-                console.log('CC')
-                window.location = (document.getElementById('certificateCourse').value);
-            } else if ($('#MBA_dropdown').hasClass('active')) {
-                console.log('MBA')
-                window.location = (document.getElementById('MBA_dropdown').value);
-            } else if ($('#ExecutiveMBA_dropdown').hasClass('active')) {
-                console.log('Ex')
-                window.location = (document.getElementById('ExecutiveMBA_dropdown').value);
-            } else if ($('#MSCAI_dropdown').hasClass('active')) {
-                console.log('MS')
-                window.location = (document.getElementById('MSCAI_dropdown').value);
-            } else if ($('#empty_dropdown2').hasClass('active') && $('#PGDegree_Dropdown').hasClass('active')) {
-                console.log('MS')
-                window.location = 'm-sc-in-applied-finance.html';
-            }
-            // window.location = (document.getElementById('UGDegree_Dropdown').value);
-        })
-    </script>
 
 </body>
 

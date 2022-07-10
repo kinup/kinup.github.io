@@ -42,9 +42,9 @@ header .container {
 .nmims-logo {
     background: url(../images/nmims-logo.jpg) no-repeat right 0;
     display: block;
-    width: 381px;
+    width: 160px;
     height: 80px;
-    background-size: 70%;
+    background-size: 100%;
 }
 
 .karma-logo {
@@ -58,8 +58,8 @@ header .container {
 .navigation {
     /* border: 1px solid green; */
     display: flex;
-    margin: 0 0 0 30px;
-    width: calc(100% - 600px);
+    margin: 0 0 0 15px;
+    width: calc(100% - 480px);
     align-items: center;
     justify-content: space-evenly;
     flex-direction: row;
@@ -73,6 +73,12 @@ header .container {
     font-weight: 500;
     text-transform: uppercase;
     color: black;
+    border-right: 1px solid;
+    padding: 0 20px;
+}
+
+.navigation a:last-child {
+    border-right: 0px solid;
 }
 
 .navigation a.active,

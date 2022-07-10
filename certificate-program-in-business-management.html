@@ -63,8 +63,100 @@
         </div>
     </div>
 
-    <section class="intro-section gray-bg pt-94 pb-100 md-pt-64 md-pb-70 loaded">
+    <section class="intro-section gray-bg pt-30 pb-100 md-pt-64 md-pb-70 loaded">
         <div class="container-fluid">
+            <div class="rs-newsletter style1 orange-color mt-30 pb-70">
+                <div class="">
+                    <div class="newsletter-wrap">
+                        <div class="row y-middle">
+                            <form class="newsletter-form d-flex width-100" id="dynamicForm" name="contact-form1" onsubmit="return mysubmit();">
+                                <div class="row width-100">
+                                    <div class="col-lg-4 col-md-12 md-mb-30">
+                                        <label class="white-color">Program Type</label>
+                                        <!-- <i class="fa fa-angle-down"></i> -->
+                                        <select id="A" class="selectClass" onchange="showDropdown2(this)">
+                                            <option value="">Select</option>
+                                            <option value="PGDegree">PG Degree</option>
+                                            <option value="UGDegree">UG Degree</option>
+                                            <option value="oneYear">1-Year Diplomas</option>
+                                            <option value="sixMonths">6-month Certificates</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-4 col-md-12">
+                                        <label class="white-color">Choose a Program</label>
+                                        <!-- <i class="fa fa-angle-down"></i> -->
+                                        <select id="empty_dropdown1" class="selectClass">
+                                            <option value=" ">---</option>
+                                        </select>
+                                        <select class="selectClass" id="PGDegree_Dropdown" style="display: none;" onchange="showDropdown3(this)">
+                                        <option value="">Select</option>
+                                        <option value="MBA">MBA</option>
+                                        <option value="ExecutiveMBA">Executive MBA</option>
+                                        <option value="MSAI">M.Sc. Artificial Intelligence</option>
+                                        <option value="MSAF">M.Sc. Applied Finance</option>
+                                    </select>
+                                        <select class="selectClass" id="UGDegree_Dropdown" style="display: none; ">
+                                        <option value="">Select</option>
+                                        <option value="bachelor-in-business-administration-business-analytics.html">B.B.A. – Business Analytics</option>
+                                        <option value="bachelor-in-business-administration.html">B.B.A.</option>
+                                        <option value="bachelor-of-commerce.html">B.Com.</option>
+                                    </select>
+                                        <select class="selectClass" id="diplomaCourse" style="display: none; ">
+                                        <option value="diploma-in-banking-and-finance.html">Banking & Finance Management</option>
+                                        <option value="diploma-in-business-management.html">Business Management</option>
+                                        <option value="diploma-in-financial-management.html">Financial Management</option>
+                                        <option value="diploma-in-human-resource-management.html">Human Resource Management</option>
+                                        <option value="diploma-in-international-trade-management-2">International Trade Management</option>
+                                        <option value="diploma-in-marketing-management.html">Marketing Management</option>
+                                        <option value="diploma-in-operations-management.html">Operations Management</option>
+                                        <option value="diploma-in-retail-management.html">Retail Management</option>
+                                        <option value="diploma-in-supply-chain-management.html">Supply Chain Management</option>
+                                    </select>
+                                        <select class="selectClass" id="certificateCourse" style="display: none; ">
+                                        <option value="certificate-program-in-business-management.html">Business Management</option>
+                                        <option value="certificate-program-in-corporate-communications.html">Corporate Communication</option>
+                                        <option value="certificate-program-in-it-management.html">Information Technology Management</option>
+                                        <option value="certificate-program-in-operations-management.html">Operations Management</option>
+                                        <option value="certificate-program-in-project-management.html">Project Management</option>
+                                    </select>
+                                    </div>
+                                    <div class="col-lg-4 col-md-12">
+                                        <label class="white-color">Choose Specialization</label>
+                                        <select id="empty_dropdown2" class="selectClass1">
+                                        <option value=" ">---</option>
+                                    </select>
+                                        <select class="selectClass1" id="MBA_dropdown" style="display: none; ">
+                                        <option value="mba-banking-and-finance-management.html">Banking & Finance</option>
+                                        <option value="mba-business-management.html">Business Management</option>
+                                        <option value="mba-financial-management.html">Financial Management</option>
+                                        <option value="mba-human-resource-management">Human Resource Management</option>
+                                        <option value="mba-information-technology-and-systems-management.html">I.T. & Systems Management</option>
+                                        <option value="mba-international-trade-management.html">International Trade Management</option>
+                                        <option value="mba-marketing-management.html">Marketing Management</option>
+                                        <option value="mba-operations-management.html">Operations Management</option>
+                                        <option value="mba-retail-management.html">Retail Management</option>
+                                        <option value="mba-supply-chain-management.html">Supply Chain Management</option>
+                                    </select>
+                                        <select class="selectClass1" id="ExecutiveMBA_dropdown" style="display: none; ">
+                                        <option value="mba-working-executive.html">Applied Finance</option>
+                                        <option value="mba-executive-with-specialisation-in-business-analytics.html">Business Analytics</option>
+                                        <option value="mba-working-executive.html">Leadership & Strategy</option>
+                                        <option value="mba-working-executive.html">Marketing Management</option>
+                                        <option value="mba-working-executive.html">Operations & Supply Chain</option>
+                                    </select>
+                                        <select class="selectClass1" id="MSCAI_dropdown" style="display: none; ">
+                                        <option value="master-of-science-in-artificial-intelligence.html">Deep Learning</option>
+                                        <option value="master-of-science-in-artificial-intelligence.html">DevOps</option>
+                                    </select>
+
+                                        <button type="submit">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row clearfix">
                 <!-- Content Column -->
                 <div class="col-lg-8 md-mb-50">
@@ -228,8 +320,11 @@
                         <!-- Video Box -->
                         <div class="intro-video media-icon orange-color2">
                             <img class="video-img" src="images/pg27.jpg" alt="Video Image">
-                            <a href="#">
+                            <a href="downloads/Diploma & Certificate-brochure-KEPL.pdf" target="_blank">
                                 <i class="fa fa-download"></i> &nbsp; Download Brochure
+                            </a>
+                            <a href="contact-us.html" class="mt-20">
+                                Enquire Form
                             </a>
 
                         </div>
@@ -241,11 +336,7 @@
                                     <span class="label">Duration </span>
                                     <span class="value">Upto 6 months</span>
                                 </li>
-                                <li class="quizzes-feature">
-                                    <!-- <i class="fa fa-puzzle-piece"></i> -->
-                                    <span class="label">Batch Starts </span>
-                                    <span class="value">29th July, 2022</span>
-                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -297,6 +388,7 @@
     <script src="js/popper.min.js "></script>
     <script src="js/bootstrap.min.js "></script>
     <script src="js/owl.carousel.min.js "></script>
+    <script src="js/findaprogram.js"></script>
     <script>
         $(function() {
             // Owl Carousel
