@@ -150,6 +150,15 @@ header .container {
     background: url(../images/down_arrow.png) no-repeat 97% center #fff;
 }
 
+.selectClass_contact {
+    padding: 10px 15px;
+    width: 100%;
+    appearance: none;
+    background: url(../images/down_arrow.png) no-repeat 97% center #fff;
+    border: 0;
+    color: #767676;
+}
+
 .selectClass1 {
     padding: 15px;
     width: 80%;
