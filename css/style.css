@@ -5975,6 +5975,11 @@ body .modal-backdrop {
     width: 100%;
 }
 
+.rs-breadcrumbs .breadcrumbs-img1 img {
+    width: 100%;
+    height: 220px;
+}
+
 .rs-breadcrumbs .breadcrumbs-text {
     position: absolute;
     top: 50%;
@@ -14521,7 +14526,7 @@ body .modal-backdrop {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 3px;
-    padding: 60px 70px;
+    padding: 20px 40px;
     position: relative;
 }
 
@@ -14557,7 +14562,7 @@ body .modal-backdrop {
 
 .rs-newsletter.style1 .newsletter-wrap .newsletter-form button {
     position: absolute;
-    right: 0;
+    right: -12px;
     top: 0;
     background: #273c66;
     color: #ffffff;
@@ -17614,6 +17619,7 @@ body .modal-backdrop {
 .rs-footer.home9-style.main-home .footer-bottom .copyright p {
     margin-bottom: 0;
     color: #f3f8f9;
+    font-size: 11px;
 }
 
 .rs-footer.home9-style.main-home .footer-bottom .copyright a {
@@ -17628,6 +17634,7 @@ body .modal-backdrop {
     display: inline-block;
     position: relative;
     padding: 0px 19px 0 25px;
+    font-size: 13px;
 }
 
 .rs-footer.home9-style.main-home .footer-bottom .copy-right-menu li a {
