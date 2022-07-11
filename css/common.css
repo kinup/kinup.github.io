@@ -42,9 +42,9 @@ header .container {
 .nmims-logo {
     background: url(../images/nmims-logo.jpg) no-repeat right 0;
     display: block;
-    width: 160px;
-    height: 80px;
-    background-size: 100%;
+    width: 200px;
+    height: 100px;
+    background-size: 99%;
 }
 
 .karma-logo {
