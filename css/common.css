@@ -233,7 +233,7 @@ header .container {
     }
     .nmims-logo,
     .karma-logo {
-        height: 50px;
+        height: 80px;
     }
     .nmims-logo {
         width: 150px;
@@ -241,6 +241,7 @@ header .container {
     }
     .karma-logo {
         width: 120px;
+        height: 55px;
     }
     .mobile-menu {
         display: flex;
