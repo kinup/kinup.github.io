@@ -56,21 +56,21 @@
 }
 
 .slide1 {
-    background: url(../images/banner1.jpg);
+    background: url(../images/banner1_1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .slide2 {
-    background: url(../images/2.jpg);
+    background: url(../images/banner2_2.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .slide3 {
-    background: url(../images/banner3.jpg);
+    background: url(../images/banner3_3.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
